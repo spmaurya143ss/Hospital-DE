@@ -13,6 +13,11 @@ display(cptcodes_df)
 
 # COMMAND ----------
 
+# DBTITLE 1,Parquet file creation
+cptcodes_df.write.format("parquet").mode("overwrite").save("/mnt/bronze/cpt_codes")
+
+# COMMAND ----------
+
 # MAGIC %sql
 # MAGIC select * from cptcodes
 

@@ -13,7 +13,8 @@ display(claims_df)
 
 # COMMAND ----------
 
-df.write.format("parquet").mode("overwrite")
+# DBTITLE 1,Parquet file creation
+claims_df.write.format("parquet").mode("overwrite").save("/mnt/bronze/claims/")
 
 # COMMAND ----------
 
