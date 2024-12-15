@@ -47,7 +47,8 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"container": "emrdata",
-							"file_path": "hos-b"
+							"file_path": "hos-b",
+							"file_name": "@{}"
 						}
 					}
 				],
@@ -57,7 +58,8 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"db_name": "trendytech-hospital-b",
-							"schema_name": "dbo"
+							"schema_name": "dbo",
+							"table_name": "@{}"
 						}
 					}
 				]
