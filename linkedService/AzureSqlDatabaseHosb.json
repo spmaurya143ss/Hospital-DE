@@ -1,0 +1,17 @@
+{
+	"name": "AzureSqlDatabaseHosb",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "hsp20241213.database.windows.net",
+			"database": "trendytech-hospital-b",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "sql-admin",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQEM1QjAxQ0JBLTc5M0ItNEQ2Ny04QTBDLUNGNkZFNTgzREE3OF84NTNiZmNjZC03M2U0LTRkN2QtOTM3YS1hNzU5NTFmOTJiMjIiDQp9"
+		}
+	}
+}
