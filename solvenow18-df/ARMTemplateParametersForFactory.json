@@ -1,0 +1,60 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "solvenow18-df"
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage2_accountKey": {
+			"value": ""
+		},
+		"AzureDatabricksDeltaLake1_accessToken": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_password": {
+			"value": ""
+		},
+		"AzureSqlDatabaseHosb_password": {
+			"value": ""
+		},
+		"hosa_sql_ls_password": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://emrdata20241213.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage2_properties_typeProperties_url": {
+			"value": "https://emrdata20241213.dfs.core.windows.net/"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"value": "hsp20241213.database.windows.net"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"value": "trendytech-hospital-a"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"value": "sql-admin"
+		},
+		"AzureSqlDatabaseHosb_properties_typeProperties_server": {
+			"value": "hsp20241213.database.windows.net"
+		},
+		"AzureSqlDatabaseHosb_properties_typeProperties_database": {
+			"value": "trendytech-hospital-b"
+		},
+		"AzureSqlDatabaseHosb_properties_typeProperties_userName": {
+			"value": "sql-admin"
+		},
+		"hosa_sql_ls_properties_typeProperties_server": {
+			"value": "hsp20241213.database.windows.net"
+		},
+		"hosa_sql_ls_properties_typeProperties_database": {
+			"value": "@{linkedService().db_name}"
+		},
+		"hosa_sql_ls_properties_typeProperties_userName": {
+			"value": "sql-admin"
+		}
+	}
+}
