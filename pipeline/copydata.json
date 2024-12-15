@@ -1,0 +1,68 @@
+{
+	"name": "copydata",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy data1",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"writeBehavior": "insert",
+						"sqlWriterUseTableLock": false
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "generic_adls_flat_file",
+						"type": "DatasetReference",
+						"parameters": {
+							"container": "emrdata",
+							"file_path": "hos-b"
+						}
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "generic_sql_ds",
+						"type": "DatasetReference",
+						"parameters": {
+							"db_name": "trendytech-hospital-b",
+							"schema_name": "dbo"
+						}
+					}
+				]
+			}
+		],
+		"annotations": []
+	}
+}
