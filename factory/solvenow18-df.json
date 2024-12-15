@@ -1,0 +1,9 @@
+{
+	"name": "solvenow18-df",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "30e7e444-3698-40a2-b473-3c5d1c18e0da",
+		"tenantId": "262de25e-e505-49a3-b252-99a2559a9677"
+	}
+}
